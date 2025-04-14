@@ -7,16 +7,16 @@ public class Animation : MonoBehaviour
     
     void Start()
     {
-        locomotion = locomotion.GetComponent<Locomotion>();
+        //locomotion = locomotion.GetComponent<Locomotion>();
     }
 
     void Update()
     {
-        if (locomotion.movement != Vector3.zero)
+        //if (locomotion.movement != Vector3.zero)
         {
             charAnimator.SetBool("isMove", true);
         }
-        if (locomotion.movement == Vector3.zero)
+        //if (locomotion.movement == Vector3.zero)
         {
             charAnimator.SetBool("isMove", false);
         }

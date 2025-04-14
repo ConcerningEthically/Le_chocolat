@@ -207,7 +207,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.25340143, y: 0.0000000087078025, z: -0.0000000022810192, w: 0.9673612}
-  m_LocalPosition: {x: 1, y: 4.25, z: -3}
+  m_LocalPosition: {x: 10, y: 4.25, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -729,7 +729,7 @@ Transform:
   m_GameObject: {fileID: 1568669796}
   serializedVersion: 2
   m_LocalRotation: {x: 0.2534014, y: 0.00000000868865, z: -0.000000002207908, w: 0.9673613}
-  m_LocalPosition: {x: 1, y: 4.25, z: -3}
+  m_LocalPosition: {x: 10, y: 4.25, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1911,7 +1911,7 @@ Transform:
   m_GameObject: {fileID: 3955086801877452156}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 2, z: 1}
+  m_LocalPosition: {x: 10, y: 2, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1928,8 +1928,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3955086801877452156}
   serializedVersion: 4
-  m_Mass: 0.000001
-  m_Drag: 2.5
+  m_Mass: 5
+  m_Drag: 5
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -1959,21 +1959,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0bc84b86288f45448c7c8c324be5e54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 2.5
+  speed: 20
+  maxSpeed: 10
   accelerationRate: 100
-  jumpForce: 5
+  jumpForce: 7.5
   playerRB: {fileID: 4442971256233238471}
   cameraOrientation: {fileID: 330585546}
   player: {fileID: 4442971256233238470}
+  groundCheck: {fileID: 748181896}
   ground:
     serializedVersion: 2
     m_Bits: 64
-  groundCheck: {fileID: 748181896}
-  groundCheckRadius: 0.2
-  angularVelocity: {x: 0, y: 0, z: 0}
-  rotationSpeed: 1
+  groundCheckRadius: 0.1
+  rotationSpeed: 2
   charAnimator: {fileID: 4442971256233238477}
-  movement: {x: 0, y: 0, z: 0}
 --- !u!136 &4442971256233238474
 CapsuleCollider:
   m_ObjectHideFlags: 0
