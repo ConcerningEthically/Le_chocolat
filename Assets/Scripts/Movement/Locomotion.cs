@@ -26,7 +26,9 @@ public class Locomotion : MonoBehaviour
     [SerializeField] private float rotationSpeed;
     // Animator 
     [SerializeField] private Animator charAnimator;
-    private bool grounded;
+    [SerializeField] private float walkSpeed;
+    [SerializeField] private float sprintSpeed;
+    public bool grounded;
     private bool jumping;
     // Vector3
     Vector3 movement;
@@ -48,6 +50,21 @@ public class Locomotion : MonoBehaviour
         // reset animator 
         charAnimator.SetBool("isMove", false);
 
+        // Sprinting
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+
+            charAnimator.SetBool("sprint", true);
+            speed = sprintSpeed;
+            maxSpeed = sprintSpeed;
+        }
+        else
+        {
+
+            charAnimator.SetBool("sprint", false);
+            speed = walkSpeed;
+            maxSpeed = walkSpeed;
+        }
 
         // Personal preference to have a key to unlock mouse
         if (Input.GetKeyDown(KeyCode.LeftAlt))
@@ -131,7 +148,7 @@ public class Locomotion : MonoBehaviour
         // Change y velocity when space is pressed(jump)
         if (Input.GetKeyDown(KeyCode.Space) && grounded == true)
         {
-            charAnimator.SetTrigger("Jump");
+            charAnimator.SetTrigger("jump");
             playerRB.linearVelocity = new Vector3(0, jumpForce, 0);
             jumping = true;
         }
@@ -142,7 +159,7 @@ public class Locomotion : MonoBehaviour
             jumping = false;
             charAnimator.SetBool("fall", false);
             charAnimator.SetBool("grounded", true);
-            charAnimator.ResetTrigger("Jump");
+            charAnimator.ResetTrigger("jump");
             playerRB.useGravity = false;
 
         }
