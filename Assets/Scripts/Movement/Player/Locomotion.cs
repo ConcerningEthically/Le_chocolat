@@ -136,6 +136,7 @@ public class Locomotion : MonoBehaviour
             // Find the differnce between the camera direction and current direction, place the difference into a vector3
             float turn = faceDir - currentDir;
             // Fixes previous issue of having random rotations when turn value switches from positive to negative at the default 'forward' direction
+            turn = Mathf.Clamp(turn, -360, 360);
             if (turn >= 180)
             {
                 turn = -turn + 180;
