@@ -59,7 +59,7 @@ public class Locomotion : MonoBehaviour
         // Prevents negative values, sets maximum
         attacking = Mathf.Clamp(attacking, 0f, 10f);
         // Debug (attacking)
-        Debug.Log(attacking);
+        //Debug.Log(attacking);
 
 
         // Sprinting
