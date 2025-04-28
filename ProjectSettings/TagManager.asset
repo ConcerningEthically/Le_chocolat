@@ -15,10 +15,10 @@ TagManager:
   - Water
   - UI
   - Ground
-  - Editor View
+  - EditorView
   - Player
   - Detection
-  - 
+  - PlayerView
   - 
   - 
   - 
